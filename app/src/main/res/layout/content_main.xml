@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.application.demowhatapp.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/usernameEditText"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="138dp"
+        android:ems="10"
+        android:hint="@string/username"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="12dp"
+        android:onClick="signupLogin"
+        android:text="@string/signup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
+
+    <TextView
+        android:id="@+id/toggleTextView"
+        android:layout_width="86dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="149dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:onClick="toggleLoginMode"
+        android:text="@string/orLogin"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+</android.support.constraint.ConstraintLayout>

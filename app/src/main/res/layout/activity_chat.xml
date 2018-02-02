@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.application.demowhatapp.activity.ChatActivity">
+
+    <!--https://stackoverflow.com/questions/8134541/how-to-set-the-focus-on-the-last-element-in-a-list-view-in-android-->
+    <!--https://stackoverflow.com/questions/20397138/android-edittext-height-resize-based-on-keyboard-->
+    <!--https://stackoverflow.com/questions/3995825/what-does-androidlayout-weight-mean-->
+    <ListView
+        android:id="@+id/chatListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:layout_above="@+id/linearLayout"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/chatEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/sendChatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="sendChat"
+            android:text="@string/sendChatButton" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
